@@ -42,6 +42,9 @@ serverName: "Лайт #1"
 - `%servername%` — отображает название сервера из конфига
 
 ## Фотографии
+![image](https://github.com/user-attachments/assets/99b3c2ba-12b6-4b9e-9027-f9131a423cc2)
+
+
 ![image](https://github.com/user-attachments/assets/ac232260-c401-4eb6-97c8-428ebc0825b4)
 
 ![image](https://github.com/user-attachments/assets/085a8332-5a9b-4522-b3ff-e0185fb70dab)
