@@ -1,0 +1,6 @@
+name: ServerNameHolder
+version: '1.0.0'
+main: ru.quizie.servernameholder.ServerNameHolder
+api-version: '1.16'
+depend:
+  - PlaceholderAPI
