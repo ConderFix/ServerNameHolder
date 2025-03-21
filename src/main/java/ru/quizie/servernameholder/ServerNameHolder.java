@@ -1,5 +1,6 @@
 package ru.quizie.servernameholder;
 
+import lombok.Getter;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -14,6 +15,9 @@ import java.util.logging.LogRecord;
 
 public final class ServerNameHolder extends JavaPlugin {
 
+    @Getter
+    private static ServerNameHolderAPI api;
+
     @Override
     public void onEnable() {
         final PluginManager pluginManager = Bukkit.getPluginManager();
@@ -26,6 +30,7 @@ public final class ServerNameHolder extends JavaPlugin {
 
         this.initConfiguration();
         new ServerNamePlaceholder().register();
+        api = new ServerNameHolderAPI();
 
     }
 
@@ -37,6 +42,7 @@ public final class ServerNameHolder extends JavaPlugin {
 
                 final YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
                 config.set("serverName", "Лайт #1");
+                config.set("serverNamePlugin", "lite1");
                 config.save(file);
 
             } catch (IOException ignored) {

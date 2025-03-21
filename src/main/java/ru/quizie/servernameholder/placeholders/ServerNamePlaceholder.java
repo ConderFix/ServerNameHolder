@@ -8,7 +8,7 @@ import ru.quizie.servernameholder.Config;
 public class ServerNamePlaceholder extends PlaceholderExpansion {
     @Override
     public String getIdentifier() {
-        return "servername"; // %servername%
+        return "servername";
     }
 
     @Override
@@ -22,8 +22,11 @@ public class ServerNamePlaceholder extends PlaceholderExpansion {
     }
 
     @Override
-    public String onRequest(OfflinePlayer _, @NotNull String __) {
-        return Config.serverName;
+    public String onRequest(OfflinePlayer player, @NotNull String string) {
+        if (string.equalsIgnoreCase("plugin")) {
+            return Config.getServerNamePlugin();
+        }
+        return Config.getServerName();
     }
 
 }
